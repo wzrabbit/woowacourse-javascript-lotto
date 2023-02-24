@@ -50,6 +50,12 @@ class ResultModalView {
       this.hide();
       this.#submitRestart();
     });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        this.hide();
+      }
+    });
   }
 }
 
