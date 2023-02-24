@@ -16,37 +16,37 @@ class ResultModalView {
   }
 
   show() {
-    $('#resultModal').classList.remove('hidden');
+    $('#result-modal').classList.remove('hidden');
   }
 
   hide() {
-    $('#resultModal').classList.add('hidden');
+    $('#result-modal').classList.add('hidden');
   }
 
   #displayPrizeResult(gameData) {
     ['fifth', 'fourth', 'third', 'second', 'first'].forEach((rank, index) => {
       const currentIndex = 4 - index;
-      $(`#${rank}PrizeMoney`).innerText = (
+      $(`#${rank}-prize-money`).innerText = (
         gameData[rank] * GAME_VALUE.PRIZE[currentIndex]
       ).toLocaleString();
-      $(`#${rank}PrizeCount`).innerText = gameData[rank];
+      $(`#${rank}-prize-count`).innerText = gameData[rank];
     });
   }
 
   #displayRateResult(rate) {
-    $('#rateResult').innerText = `당신의 총 수익률은 ${rate.toLocaleString()} %입니다.`;
+    $('#rate-result').innerText = `당신의 총 수익률은 ${rate.toLocaleString()} %입니다.`;
   }
 
   #setListeners() {
-    $('#modalBackground').addEventListener('click', () => {
+    $('#modal-background').addEventListener('click', () => {
       this.hide();
     });
 
-    $('#modalCloseButton').addEventListener('click', () => {
+    $('#modal-close-button').addEventListener('click', () => {
       this.hide();
     });
 
-    $('#restartButton').addEventListener('click', () => {
+    $('#restart-button').addEventListener('click', () => {
       this.hide();
       this.#submitRestart();
     });

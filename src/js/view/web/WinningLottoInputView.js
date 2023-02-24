@@ -10,18 +10,18 @@ class WinningLottoInputView {
   }
 
   show() {
-    $('#winningLottoInputMenu').classList.remove('hidden');
+    $('#winning-lotto-input-menu').classList.remove('hidden');
   }
 
   hide() {
-    $('#winningLottoInputMenu').classList.add('hidden');
+    $('#winning-lotto-input-menu').classList.add('hidden');
   }
 
   #setListener() {
-    $('#resultButton').addEventListener('click', (event) => {
+    $('#result-button').addEventListener('click', (event) => {
       event.preventDefault();
 
-      const formData = getFormData($('#winningLottoInputForm'));
+      const formData = getFormData($('#winning-lotto-input-form'));
       this.#submitWinningLotto(formData);
     });
   }

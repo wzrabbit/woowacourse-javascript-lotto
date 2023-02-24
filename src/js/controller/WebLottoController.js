@@ -18,7 +18,7 @@ class WebLottoController {
   #resultModalView = new ResultModalView(() => this.handleRestart());
 
   handleBudget(budget) {
-    const budgetErrorView = new ErrorView($('#buyErrorArea'), $('#budgetInput'));
+    const budgetErrorView = new ErrorView($('#buy-error-area'), $('#budget-input'));
 
     try {
       this.#validator.throwErrorIfInvalidBudget(budget);
@@ -34,8 +34,8 @@ class WebLottoController {
 
   handleWinningLotto(lottoFormData) {
     const winningLottoErrorView = new ErrorView(
-      $('#winningNumbersErrorArea'),
-      $('#firstNumberInput')
+      $('#winning-numbers-error-area'),
+      $('#first-number-input')
     );
 
     const stringifiedWinningLotto = this.#stringifyWinningLotto(lottoFormData);

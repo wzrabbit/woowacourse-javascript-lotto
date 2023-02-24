@@ -11,8 +11,8 @@ class PurchaseView {
   }
 
   clear() {
-    $('#purchasedLottoCount').innerText = '';
-    $('#purchasedLottoList').innerHTML = '';
+    $('#purchased-lotto-count').innerText = '';
+    $('#purchased-lotto-list').innerHTML = '';
   }
 
   render(lottos) {
@@ -22,10 +22,10 @@ class PurchaseView {
   }
 
   #setListener() {
-    $('#buyButton').addEventListener('click', (event) => {
+    $('#buy-button').addEventListener('click', (event) => {
       event.preventDefault();
 
-      const budget = getFormData($('#budgetInputForm')).budget;
+      const budget = getFormData($('#budget-input-form')).budget;
       const trimmedBudget = Number(budget);
 
       this.#submitBudget(trimmedBudget);
@@ -33,12 +33,12 @@ class PurchaseView {
   }
 
   #renderLottoCount(lottoCount) {
-    $('#purchasedLottoCount').innerText = `총 ${lottoCount}개를 구매했습니다.`;
+    $('#purchased-lotto-count').innerText = `총 ${lottoCount}개를 구매했습니다.`;
   }
 
   #renderPurchasedLottoList(lottos) {
     lottos.forEach((currentLotto) => {
-      $('#purchasedLottoList').insertAdjacentHTML(
+      $('#purchased-lotto-list').insertAdjacentHTML(
         'beforeend',
         this.#getLottoInformationComponent(currentLotto)
       );

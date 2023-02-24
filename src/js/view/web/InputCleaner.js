@@ -1,7 +1,7 @@
 import { $, $$ } from '../../util/web/querySelector.js';
 
 const InputCleaner = {
-  budgetInputs: [$('#budgetInput')],
+  budgetInputs: [$('#budget-input')],
   winningLottoInputs: [...$$('.winning-number-input'), $('.bonus-number-input')],
 
   clearAllInputs() {
