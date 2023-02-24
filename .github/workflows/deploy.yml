@@ -3,8 +3,8 @@ name: NodeJS with Webpack
 on:
   push:
     branches: [wzrabbit-extra]
-  schedule:
-    - cron: '*/5 * * * *'
+  # schedule:
+  #   - cron: '*/5 * * * *' 5분마다 자동 갱신 (실험할 때 사용할 것)
 
 jobs:
   deploy:
