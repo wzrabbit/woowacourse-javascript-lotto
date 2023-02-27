@@ -16,11 +16,11 @@ class ResultModalView {
   }
 
   show() {
-    $('#result-modal').classList.remove('hidden');
+    $('#result-modal').show();
   }
 
   hide() {
-    $('#result-modal').classList.add('hidden');
+    $('#result-modal').close();
   }
 
   #displayPrizeResult(gameData) {
